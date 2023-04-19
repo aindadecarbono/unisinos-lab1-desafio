@@ -39,10 +39,10 @@ public class Data {
     }
 
     private int[] retornarDataInvalida(int[] data) {
-        System.out.println("Data inválida. \nData padrão: 1/1/2000");
+        System.out.println("DATA INVÁLIDA. \nData padrão: 1/1/2023");
         dia = 1;
         mes = 1;
-        ano = 2000;
+        ano = 2023;
 
         data[0] = dia;
         data[1] = mes;
