@@ -13,7 +13,7 @@ public class Principal {
 
     private static void chamarMenu() {
 
-        System.out.println("O que você deseja fazer?");
+        System.out.println("\nO que você deseja fazer?");
 
         System.out.println("(1) criar uma loja");
         System.out.println("(2) criar um produto");
@@ -46,10 +46,10 @@ public class Principal {
         String nome = scanner.nextLine();
 
         System.out.println("Digite a quantidade de funcionários: \n");
-        int quantidadeFuncionarios = scanner.nextInt();
+        int quantidadeFuncionarios = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Digite o salário base para os funcionários: \n");
-        double salarioBaseFuncionario = scanner.nextDouble();
+        double salarioBaseFuncionario = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Para o endereço da loja, digite o nome da rua: \n");
         String nomeDaRua = scanner.nextLine();
@@ -69,17 +69,19 @@ public class Principal {
         Endereco endereco = new Endereco(nomeDaRua, cidade, estado, pais, cep, numero, complemento);
 
         System.out.println("Para a data de fundação, digite o dia: \n");
-        int dia = scanner.nextInt();
+        int dia = Integer.parseInt(scanner.nextLine());
         System.out.println("Para a data de fundação, digite o mês: \n");
-        int mes = scanner.nextInt();
+        int mes = Integer.parseInt(scanner.nextLine());
         System.out.println("Para a data de fundação, digite o ano: \n");
-        int ano = scanner.nextInt();
+        int ano = Integer.parseInt(scanner.nextLine());
 
         Data dataFundacao = new Data(dia, mes, ano);
 
         Loja loja = new Loja(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
 
         System.out.println("Você criou a seguinte loja:\n" + loja.toString());
+
+        chamarMenu();
     }
 
     private static void criarProduto() {
@@ -88,20 +90,22 @@ public class Principal {
         String nome = scanner.nextLine();
 
         System.out.println("Digite o preço do produto: \n");
-        double preco = scanner.nextDouble();
+        double preco = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Para a data de validade do produto, digite primeiro o dia: \n");
-        int dia = scanner.nextInt();
+        int dia = Integer.parseInt(scanner.nextLine());
         System.out.println("Para a data de validade do produto, digite agora o mês: \n");
-        int mes = scanner.nextInt();
+        int mes = Integer.parseInt(scanner.nextLine());
         System.out.println("Para a data de validade do produto, digite agora o ano: \n");
-        int ano = scanner.nextInt();
+        int ano = Integer.parseInt(scanner.nextLine());
 
         Data dataValidade = new Data(dia, mes, ano);
 
         Produto produto = new Produto(nome, preco, dataValidade);
 
         System.out.println("Você criou o seguinte produto:\n" + produto.toString());
+
+        chamarMenu();
     }
 
     private static void sair() {

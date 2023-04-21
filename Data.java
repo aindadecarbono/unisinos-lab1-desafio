@@ -16,6 +16,10 @@ public class Data {
 
         int[] data = new int[3];
 
+        data[0] = dia;
+        data[1] = mes;
+        data[2] = ano;
+
         if(dia <= 0 || dia >= 32 || mes <= 0 || mes >= 13){
 
             retornarDataInvalida(data);
@@ -88,6 +92,6 @@ public class Data {
 
     @Override
     public String toString() {
-        return dia + "\\/" + mes + "\\/" + ano;
+        return dia + "/" + mes + "/" + ano;
     }
 }
