@@ -35,14 +35,6 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
-    @Override
-    public String toString() {
-        return "Produto{" +
-                "nome='" + nome + '\'' +
-                ", preco=" + preco +
-                '}';
-    }
-
     public boolean estaVencido(Data dataAtual){
 
         if (dataAtual.getAno() > this.dataValidade.getAno()){
@@ -70,5 +62,14 @@ public class Produto {
             return false;
 
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", dataValidade=" + dataValidade +
+                '}';
     }
 }

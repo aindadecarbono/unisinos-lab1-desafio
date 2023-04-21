@@ -66,15 +66,6 @@ public class Loja {
         this.dataFundacao = dataFundacao;
     }
 
-    @Override
-    public String toString() {
-        return "Loja{" +
-                "nome='" + nome + '\'' +
-                ", quantidadeFuncionarios=" + quantidadeFuncionarios +
-                ", salarioBaseFuncionario=" + salarioBaseFuncionario +
-                '}';
-    }
-
     public double gastosComSalarios(){
         if (salarioBaseFuncionario == -1){
             return -1;
@@ -91,5 +82,16 @@ public class Loja {
             return 'G';
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return "Loja{" +
+                "nome='" + nome + '\'' +
+                ", quantidadeFuncionarios=" + quantidadeFuncionarios +
+                ", salarioBaseFuncionario=" + salarioBaseFuncionario +
+                ", endereco=" + endereco +
+                ", dataFundacao=" + dataFundacao +
+                '}';
     }
 }
