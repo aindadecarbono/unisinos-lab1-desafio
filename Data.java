@@ -4,55 +4,44 @@ public class Data {
     private int ano;
 
     public Data(int dia, int mes, int ano) {
-        
-        int[] data = verificarData(dia, mes, ano);
 
-        this.dia = data[0];
-        this.mes = data[1];
-        this.ano = data[2];
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+
+        verificarData(dia, mes, ano);
     }
 
-    private int[] verificarData(int dia, int mes, int ano) {
-
-        int[] data = new int[3];
-
-        data[0] = dia;
-        data[1] = mes;
-        data[2] = ano;
+    private void verificarData(int dia, int mes, int ano) {
 
         if(dia <= 0 || dia >= 32 || mes <= 0 || mes >= 13){
 
-            retornarDataInvalida(data);
+            retornarDataInvalida();
 
         }
 
         if ((dia == 31) && (mes == 2 || mes == 4 || mes == 6 || mes == 9 || mes == 10)){
 
-            retornarDataInvalida(data);
+            retornarDataInvalida();
 
         }
 
         if(!verificarAnoBissexto(ano)){
 
             if (dia == 29 && mes == 2){
-                  retornarDataInvalida(data);
+                  retornarDataInvalida();
             }
         }
 
-        return data;
     }
 
-    private int[] retornarDataInvalida(int[] data) {
+    private void retornarDataInvalida() {
         System.out.println("DATA INVÁLIDA. \nData padrão: 1/1/2023");
-        dia = 1;
-        mes = 1;
-        ano = 2023;
 
-        data[0] = dia;
-        data[1] = mes;
-        data[2] = ano;
+        setDia(1);
+        setMes(1);
+        setAno(2023);
 
-        return data;
     }
 
     private Boolean verificarAnoBissexto(int ano) {
