@@ -77,7 +77,10 @@ public class Principal {
 
         Data dataFundacao = new Data(dia, mes, ano);
 
-        Loja loja = new Loja(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
+        System.out.println("Digite quantos produtos há em estoque: \n");
+        int estoqueProdutos = Integer.parseInt(scanner.nextLine());
+
+        Loja loja = new Loja(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, estoqueProdutos);
 
         System.out.println("Você criou a seguinte loja:\n" + loja.toString());
 
