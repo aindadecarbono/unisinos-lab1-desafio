@@ -114,7 +114,7 @@ public class Loja {
 
         public boolean removeProduto(String nomeProduto){
             for (int i = 0; i < estoqueProdutos.length; i++){
-                if (nomeProduto.toLowerCase() == estoqueProdutos[i].getNome().toLowerCase()){
+                if (nomeProduto.equalsIgnoreCase(estoqueProdutos[i].getNome())){
                     estoqueProdutos[i] = null;
                     System.out.println(nomeProduto + " removido do estoque.");
                     return true;
