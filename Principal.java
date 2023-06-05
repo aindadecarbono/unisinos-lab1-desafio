@@ -4,6 +4,8 @@ import static java.lang.System.exit;
 public class Principal {
 
     static Scanner scanner = new Scanner(System.in);
+    static int quantidadeProdutos = 0;
+    static Produto[] produtos = new Produto[2];
 
     public static void main(String[] args) {
 
@@ -21,7 +23,7 @@ public class Principal {
 
         String resposta = scanner.nextLine();
 
-        switch (resposta){
+        switch (resposta) {
             case "1":
                 criarLoja();
                 break;
@@ -84,15 +86,6 @@ public class Principal {
 
         System.out.println("Você criou a seguinte loja:\n" + loja.toString());
 
-        //
-        Shopping shopping = new Shopping("shop", endereco, 1);
-
-        shopping.insereLoja(loja);
-
-        System.out.println(shopping.quantidadeLojasPorTipo("informatica"));
-
-        //
-
         chamarMenu();
     }
 
@@ -117,7 +110,25 @@ public class Principal {
 
         System.out.println("Você criou o seguinte produto:\n" + produto.toString());
 
+        if (produtos.length < 2) {
+            produtos[quantidadeProdutos] = produto;
+            quantidadeProdutos++;
+        }
+
+        if (produtos.length == 2) verificarProdutos();
+
         chamarMenu();
+    }
+
+    private static void verificarProdutos() {
+
+        for (Produto produto : produtos) {
+            if (produto.estaVencido(produto.getDataValidade())) {
+                System.out.println(produto + " VENCIDO");
+            } else {
+                System.out.println(produto + " NÃO VENCIDO");
+            }
+        }
     }
 
     private static void sair() {
