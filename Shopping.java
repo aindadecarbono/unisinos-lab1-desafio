@@ -25,6 +25,9 @@ public class Shopping {
 
     public boolean removeLoja(String nomeLoja){
         for (int i = 0; i < lojas.length; i++){
+
+            if (lojas[i] == null) continue;
+
             if (nomeLoja.equalsIgnoreCase(lojas[i].getNome())){
                 lojas[i] = null;
                 System.out.println("Loja '" + nomeLoja + "' removida do estoque.");

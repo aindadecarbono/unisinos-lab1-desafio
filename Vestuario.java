@@ -6,7 +6,7 @@ public class Vestuario extends Loja{
         super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, estoqueProdutos);
         this.produtosImportados = produtosImportados;
     }
-    public boolean isProdutosImportados() {
+    public boolean getProdutosImportados() {
         return produtosImportados;
     }
 

@@ -12,7 +12,7 @@ public class Data {
         verificarData(dia, mes, ano);
     }
 
-    private void verificarData(int dia, int mes, int ano) {
+    public void verificarData(int dia, int mes, int ano) {
 
         if(dia <= 0 || dia >= 32 || mes <= 0 || mes >= 13){
 
@@ -44,7 +44,7 @@ public class Data {
 
     }
 
-    private Boolean verificarAnoBissexto(int ano) {
+    public Boolean verificarAnoBissexto(int ano) {
 
         if(ano % 4 == 0){
             return true;
