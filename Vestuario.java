@@ -17,7 +17,6 @@ public class Vestuario extends Loja{
     @Override
     public String toString() {
         return "Vestuario{" + super.toString() +
-                "produtosImportados=" + produtosImportados +
-                '}';
+                "produtosImportados = " + produtosImportados + "}";
     }
 }

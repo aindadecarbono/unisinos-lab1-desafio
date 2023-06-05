@@ -39,7 +39,9 @@ public class Shopping {
 
     public int quantidadeLojasPorTipo(String tipoLoja){
         int quantidadeLoja = 0;
+
         for (int i = 0; i<lojas.length; i++){
+            if (lojas[i] == null) continue;
             if (lojas[i].getClass().getSimpleName().equalsIgnoreCase(tipoLoja)) quantidadeLoja++;
         }
 
@@ -109,7 +111,6 @@ public class Shopping {
         return "Shopping{" +
                 "nome = " + nome + "\n" +
                 "endereco = " + endereco + "\n" +
-                "lojas = " + Arrays.toString(lojas) +
-                '}';
+                "lojas = " + Arrays.toString(lojas) + "}";
     }
 }

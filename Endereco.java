@@ -78,12 +78,12 @@ public class Endereco {
     public String toString() {
         return "Endereco{" +
                 "nomeDaRua='" + nomeDaRua + '\'' +
-                ", cidade='" + cidade + '\'' +
-                ", estado='" + estado + '\'' +
-                ", pais='" + pais + '\'' +
-                ", cep='" + cep + '\'' +
-                ", numero='" + numero + '\'' +
-                ", complemento='" + complemento + '\'' +
+                "cidade='" + cidade + '\'' +
+                "estado='" + estado + '\'' +
+                "pais='" + pais + '\'' +
+                "cep='" + cep + '\'' +
+                "numero='" + numero + '\'' +
+                "complemento='" + complemento + '\'' +
                 '}';
     }
 }

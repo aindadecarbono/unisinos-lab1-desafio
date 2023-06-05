@@ -18,7 +18,6 @@ public class Alimentacao extends Loja{
     @Override
     public String toString() {
         return "Alimentacao{" + super.toString() +
-                "dataAlvara=" + dataAlvara +
-                '}';
+                "dataAlvara = " + dataAlvara + "}";
     }
 }

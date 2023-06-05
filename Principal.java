@@ -108,26 +108,30 @@ public class Principal {
 
         Produto produto = new Produto(nome, preco, dataValidade);
 
-        System.out.println("Você criou o seguinte produto:\n" + produto.toString());
+        System.out.println("Você criou o seguinte produto:\n" + produto.toString() + "\n");
 
-        if (produtos.length < 2) {
+        if (quantidadeProdutos < 2) {
             produtos[quantidadeProdutos] = produto;
             quantidadeProdutos++;
         }
 
-        if (produtos.length == 2) verificarProdutos();
+        if (quantidadeProdutos == 2) verificarProdutos();
 
         chamarMenu();
     }
 
     private static void verificarProdutos() {
 
+        Data dataAtual = new Data(5, 6, 2023);
+
         for (Produto produto : produtos) {
-            if (produto.estaVencido(produto.getDataValidade())) {
+            if (produto.estaVencido(dataAtual)){
+                System.out.println("=======================");
                 System.out.println(produto + " VENCIDO");
             } else {
                 System.out.println(produto + " NÃO VENCIDO");
             }
+            System.out.println("=======================");
         }
     }
 

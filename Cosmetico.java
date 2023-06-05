@@ -19,7 +19,6 @@ public class Cosmetico extends Loja{
     @Override
     public String toString() {
         return "Cosmetico{" + super.toString() +
-                "taxaComercializacao=" + taxaComercializacao +
-                '}';
+                "taxaComercializacao = " + taxaComercializacao + "}";
     }
 }
