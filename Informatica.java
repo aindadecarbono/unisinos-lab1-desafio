@@ -18,7 +18,7 @@ public class Informatica extends Loja{
     @Override
     public String toString() {
         return "Informatica{" + super.toString() +
-                "seguroEletronicos=" + seguroEletronicos +
+                "seguroEletronicos = " + seguroEletronicos +
                 '}';
     }
 }

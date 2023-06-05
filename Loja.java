@@ -116,12 +116,12 @@ public class Loja {
             for (int i = 0; i < estoqueProdutos.length; i++){
                 if (nomeProduto.equalsIgnoreCase(estoqueProdutos[i].getNome())){
                     estoqueProdutos[i] = null;
-                    System.out.println(nomeProduto + " removido do estoque.");
+                    System.out.println("Produto '" + nomeProduto + "' removida do estoque.");
                     return true;
                 }
             }
 
-            System.out.println(nomeProduto + " não está no estoque e, portanto, não foi removido");
+            System.out.println("Produto '" + nomeProduto + "' não está no estoque e, portanto, não foi removido");
             return false;
 
         }
@@ -130,7 +130,10 @@ public class Loja {
         int indexNulo = -1;
 
         for (int i = 0; i < estoqueProdutos.length; i++){
-            if (estoqueProdutos[i] == null) indexNulo = i;
+            if (estoqueProdutos[i] == null){
+                indexNulo = i;
+                break;
+            }
         }
 
         return indexNulo;

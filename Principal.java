@@ -84,6 +84,15 @@ public class Principal {
 
         System.out.println("Você criou a seguinte loja:\n" + loja.toString());
 
+        //
+        Shopping shopping = new Shopping("shop", endereco, 1);
+
+        shopping.insereLoja(loja);
+
+        System.out.println(shopping.quantidadeLojasPorTipo("informatica"));
+
+        //
+
         chamarMenu();
     }
 
